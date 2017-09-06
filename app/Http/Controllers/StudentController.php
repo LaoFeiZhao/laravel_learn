@@ -15,11 +15,17 @@ class StudentController extends Controller
 
     public function add($name, $age)
     {
-        $success = DB::insert(
-            'insert into student(name,age) values (?,?)',
-            [$name, $age]
-        );
-        echo $success;
+//        $success = DB::insert(
+//            'insert into student(name,age) values (?,?)',
+//            [$name, $age]
+//        );
+//        echo $success;
+        for ($i = 0; $i < 10; $i++) {
+            DB::insert(
+                'insert into student(name,age) values (?,?)',
+                ['student' . $i, 14 + $i]
+            );
+        }
     }
 
     public function getList()

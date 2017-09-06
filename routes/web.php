@@ -69,7 +69,12 @@ Route::get('view', function () {
 //控制器
 Route::get('member/info/{id?}', 'MemberController@info');
 
-Route::get('student/add/{name}/{age}', 'StudentController@add');
+Route::get('student/add/{name?}/{age?}', 'StudentController@add');
 Route::get('student/list', 'StudentController@getList');
 Route::get('student/update/{id}/{age}', 'StudentController@update');
 Route::get('student/delete/{id}', 'StudentController@delete');
+
+//orm learn
+Route::get('orm1', 'OrmController@orm1');
+Route::get('orm2', 'OrmController@orm2');
+Route::get('orm3', 'OrmController@orm3');
